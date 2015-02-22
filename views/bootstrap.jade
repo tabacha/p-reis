@@ -38,7 +38,7 @@ html(lang='de')
                =__('Telephone')
 
           ul.nav.navbar-nav.navbar-right
-            li
+            li(class=menu=='logout'?'active':undefined)
               a(href='/logout') 
                =__('Logout')
     .container

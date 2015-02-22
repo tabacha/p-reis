@@ -88,7 +88,7 @@ app.use(session({ secret: 'dassd324932689kkkkk',
 // app.use(express.session());
 app.use(flash());
 app.use(passport.initialize());
-  app.use(passport.session());
+app.use(passport.session());
 
 
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
@@ -139,7 +139,11 @@ app.post('/login', passport.authenticate('local', { failureFlash: true,
                                                     failureRedirect: '/login' }));
 app.get('/logout', function(req, res){
   req.logout();
-  res.redirect('/login');
+  res.render('logout', {
+        menu: 'logout',
+        title: req.__('Logged out'),
+        user:req.user,
+  });
 });
 
 express.static.mime.define({'text/css': ['css']});
