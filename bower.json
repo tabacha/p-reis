@@ -1,0 +1,24 @@
+{
+  "name": "p-reis",
+  "version": "0.0.1",
+  "authors": [
+    "sven@anders-hamburg.de"
+  ],
+  "description": "Telephonie",
+  "keywords": [
+    "asterisk"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "bootstrap": "~3.3.2"
+  }
+}

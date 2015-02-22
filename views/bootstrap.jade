@@ -1,0 +1,53 @@
+doctype html
+html(lang='de')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title
+      =__('P-Reis')+' '+title
+    // Bootstrap core CSS
+    link(href='components/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/main.css', rel='stylesheet')
+  body   
+    .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') P-Reis
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-left
+            li(class=menu=='calls'?'active':undefined)
+              a(href='/calls') 
+               =__('Calls')
+            li(class=menu=='phonebook'?'active':undefined)
+              a(href='/phonebook') 
+               =__('Phonebook')
+            li(class=menu=='voicemail'?'active':undefined)
+              a(href='/voicemail') 
+               =__('Voicemail')
+            li(class=menu=='redirects'?'active':undefined)
+              a(href='/redircets')
+               =__('Redirects')
+            li(class=menu=='telephone'?'active':undefined)
+              a(href='/telephone') 
+               =__('Telephone')
+
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/logout') 
+               =__('Logout')
+    .container
+      .starter-template
+        h1=title
+        block content
+    
+    // Bootstrap core JavaScript
+    // ==================================================
+    // Placed at the end of the document so the pages load faster
+    script(src='/components/jquery/dist/jquery.min.js')
+    script(src='/components/bootstrap/dist/js/bootstrap.min.js')

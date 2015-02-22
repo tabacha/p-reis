@@ -1,0 +1,27 @@
+{
+  "name": "p-reis",
+  "version": "0.0.1",
+  "description": "Telefonie software",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "asterisk"
+  ],
+  "author": "Sven Anders",
+  "license": "GPL",
+  "dependencies": {
+    "xtend": "~4.0.0",
+    "csurf": "~1.6.6",
+    "forms": "~1.1.1",
+    "express": "~4.11.2",
+    "jade": "~1.9.2",
+    "i18n": "~0.5.0",
+    "body-parser": "~1.12.0",
+    "passport": "~0.2.1",
+    "passport-local": "~1.0.0",
+    "connect-flash": "~0.1.1",
+    "express-session": "~1.10.3"
+  }
+}

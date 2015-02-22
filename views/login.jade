@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+   meta(name='viewport', content='width=device-width, initial-scale=1')
+   title= title
+   link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
+  body
+    block content
+     .container
+       form.form-signin(action="/login", method="post")
+        h2.form-signin-heading=__('Please sign in')
+        h3=message
+        input.input-block-level(type="text", name="username", placeholder="#{__('Username')}")
+        input.input-block-level(type="password", name="password", placeholder="#{__('Password')}")
+        label.checkbox
+         input(type="checkbox" value="remember-me")
+         =__('Remember me') 
+        button.btn.btn-large.btn-primary(type="submit") 
+         =__('Sign in')
