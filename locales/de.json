@@ -12,5 +12,16 @@
 	"Voicemail": "Anrufbeantworter",
 	"Redirects": "Weiterleitungen",
 	"Telephone": "Telefon",
-	"Logout": "Abmelden"
+	"Logout": "Abmelden",
+	"p-reis login page": "p-reis login page",
+	"Logged out": "Logged out",
+	"You have been logged out. Have a nice day!": "You have been logged out. Have a nice day!",
+	"date time": "date time",
+	"duration": "duration",
+	"my number": "my number",
+	"direction": "direction",
+	"member": "member",
+	"my device": "my device",
+	"dialog partner": "dialog partner",
+	"number": "number"
 }

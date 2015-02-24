@@ -9,6 +9,7 @@ html(lang='de')
     // Bootstrap core CSS
     link(href='components/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
     link(href='css/main.css', rel='stylesheet')
+    block head
   body   
     .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
       .container
@@ -51,3 +52,4 @@ html(lang='de')
     // Placed at the end of the document so the pages load faster
     script(src='/components/jquery/dist/jquery.min.js')
     script(src='/components/bootstrap/dist/js/bootstrap.min.js')
+    block scriptfooter

@@ -1,4 +1,71 @@
 extends bootstrap
+block append head
+  link(href='/components/datatables/media/css/jquery.dataTables.min.css', rel='stylesheet')
 block append content
-  |Hallo
+  table#callhist
+    thead
+      tr
+        th 
+        th 
+          =__('date time')
+        th 
+          =__('duration')   
+        th 
+          =__('my number')
+        th 
+          =__('my device')
+        th 
+          =__('direction')
+        th 
+          =__('dialog partner')
+        th 
+          =__('number')
+    tfoot
+      tr
+        th 
+        th 
+          =__('date time')
+        th 
+          =__('duration')   
+        th 
+          =__('my number')
+        th 
+          =__('my device')
+        th 
+          =__('direction')
+        th 
+          =__('dialog partner')
+        th 
+          =__('number')
+  | Funktionen:
+  | Anrufliste deaktivieren
+  | Export 
+  | Löschen
+
   = ' '+user.username
+
+block append scriptfooter
+  script(src='/components/datatables/media/js/jquery.dataTables.min.js')
+  script
+    |$(document).ready(function() {
+    |  $('#callhist').dataTable( {
+    |    "processing": true,
+    |    "ajax": "/calls/getAll",
+    |    "columns": [
+    |            {
+    |            "class":          "details-control",
+    |            "orderable":      false,
+    |            "data":           null,
+    |            "defaultContent": ""
+    |        },
+    |        { "data": "time" },
+    |        { "data": "duration" },
+    |        { "data": "my_number" },
+    |        { "data": "my_device" },
+    |        { "data": "direction" },
+    |        { "data": "dialog_partner" },
+    |        { "data": "dialog_partner_ext" },
+    |    ],
+    |    "order": [[1, 'asc']]
+    |    } );
+    |} );
